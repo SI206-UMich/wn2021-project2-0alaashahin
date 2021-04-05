@@ -99,7 +99,7 @@ def summarize_best_books(filepath):
     to your list of tuples.
     """
     data = ""
-    with open(filepath) as f:
+    with open(filepath, encoding="utf-8") as f:
         data = f.read()
 
     soup = BeautifulSoup(data, "lxml")
@@ -167,7 +167,7 @@ def extra_credit(filepath):
     Please see the instructions document for more information on how to complete this function.
     You do not have to write test cases for this function.
     """
-    with open(filepath) as f:
+    with open(filepath, encoding="utf-8") as f:
         data = f.read()
     soup = BeautifulSoup(data, 'lxml')
     description = soup.find('div', class_ = 'readable stacked').find('span', id = "freeText4791443123668479528").text
